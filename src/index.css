@@ -5,3 +5,11 @@
   --font-header:"Google Sans Code", monospace;
   --font-body : "Inter", sans-serif;
 }
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+
+

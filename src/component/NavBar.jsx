@@ -2,27 +2,32 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 const NavBar = () => {
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+   const clickMenu = () => {
+    setMobileMenuOpen(false)
+   }
     const navigation = [
-  { name: "Home", href: "#" },
-  { name: "Find Jobs", href: "#" },
+  { name: "Home", href: "#home" },
+  { name: "Find Jobs", href: "#findjobs" },
   { name: "Blog", href: "#" },
-  { name: "Contacts Us ", href: "#" },
+  { name: "Contacts Us ", href: "#contact-us" },
 ];
     return (
 
-         <header className="inset-x-0 -top-3  fixed backdrop-blur z-50">
+         <header className="inset-x-0 -top-3  fixed bg-[#f0f5ffc7] backdrop-blur-2xl z-50">
                 <nav
                   aria-label="Global"
-                  className="flex items-center justify-between p-4 lg:px-8"
+                  className="flex items-center  justify-between p-4 lg:px-8"
                 >
                   <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
-                      <span className="sr-only">JJ Care Ventures</span>
+                      <span className="sr-only">Risingstar Recruitment Agency</span>
                       <img
                         alt=""
-                        src="https://i.ibb.co/VphC67GL/jjcarelogo.png"
-                        className="h-15 w-auto"
+                        src="https://i.ibb.co/4Q3pVWw/risinglogo.png"
+                        className="h-12 p-1 w-auto "
                       />
                     </a>
                   </div>
@@ -41,31 +46,31 @@ const NavBar = () => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="text-sm/6  text-gray-900"
+                        className="text-sm/6  text-gray-900 hover:text-[#008eca] "
                       >
                         {item.name}
                       </a>
                     ))}
                   </div>
                   <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" className="text-sm/6 font-semibold text-gray-900">
-                      Log in <span aria-hidden="true">&rarr;</span>
+                    <a href="#" className="text-sm/6 font-semibold text-[#008eca]">
+                      Log in 
                     </a>
                   </div>
                 </nav>
                 <Dialog
                   open={mobileMenuOpen}
                   onClose={setMobileMenuOpen}
-                  className="lg:hidden bg-[]"
+                  className="lg:hidden "
                 >
                   <div className="fixed inset-0 z-50" />
-                  <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto backdrop-blur-2xl p-3 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                    <div className="flex items-center text-center justify-between">
+                  <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto  bg-[#f0f5ff81] backdrop-blur-2xl p-3 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div className="flex items-center text-center  justify-between">
                       <a href="#" className="-m-1.5 p-1.5">
-                        <span className="sr-only">Your Company</span>
+                        
                         <img
                           alt=""
-                          src="https://i.ibb.co/VphC67GL/jjcarelogo.png"
+                          src="https://i.ibb.co/4Q3pVWw/risinglogo.png"
                           className="h-15 w-auto"
                         />
                       </a>
@@ -80,24 +85,20 @@ const NavBar = () => {
                     </div>
                     <div className="mt-6 flow-root">
                       <div className="-my-6 divide-y divide-gray-500/10">
-                        <div className="space-y-2 py-6">
+                        <div className="space-y-2 p-16">
                           {navigation.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-mx-3 block text-center rounded-lg px-3 py-2 text-base/7 font-medium text-gray-900 hover:bg-gray-50"
+                              onClick={clickMenu}
+                              className="-mx-3 block text-center rounded-lg px-3 py-2 font-medium gap-5 text-gray-900 text-[1.3em]  hover:text[#f14126] "
                             >
                               {item.name}
                             </a>
                           ))}
                         </div>
                         <div className="py-6">
-                          <a
-                            href="#"
-                            className="-mx-3 block rounded-lg text-center px-3 py-2.5 text-base/7 font-medium text-gray-900 hover:bg-gray-50"
-                          >
-                            Log in
-                          </a>
+                          
                         </div>
                       </div>
                     </div>

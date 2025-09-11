@@ -13,7 +13,7 @@ export default function SearchBar() {
       <div className="w-full px-10 sm:px-0 max-w-md mx-auto mt-6">
         <div className="relative">
           <Input
-            placeholder="e.g Personal Assistant"
+            placeholder="e.g Driver"
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
             className={clsx(
