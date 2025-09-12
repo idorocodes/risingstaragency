@@ -17,7 +17,7 @@ export const ContactUs = () => {
   }
 
   // build WhatsApp link dynamically
-  const whatsappLink = `https://api.whatsapp.com/send?phone=2347085428196&text=${encodeURIComponent(
+  const whatsappLink = `https://api.whatsapp.com/send?phone=2348039184642&text=${encodeURIComponent(
     `Hello, my name is ${form.firstName} ${form.lastName}.
 Company: ${form.company}
 Email: ${form.email}

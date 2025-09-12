@@ -32,6 +32,9 @@ importers:
       react-dom:
         specifier: ^19.1.0
         version: 19.1.1(react@19.1.1)
+      react-social-icons:
+        specifier: ^6.25.0
+        version: 6.25.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       tailwindcss:
         specifier: ^4.1.11
         version: 4.1.11
@@ -143,6 +146,10 @@ packages:
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
+
+  '@babel/runtime@7.28.4':
+    resolution: {integrity: sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==}
+    engines: {node: '>=6.9.0'}
 
   '@babel/template@7.27.2':
     resolution: {integrity: sha512-LPDZ85aEJyYSd18/DkjNh4/y1ntkE5KwUHWTiqgRxruuZL2F1yuHligVHLvcHY2vMHXttKFpJn6LwfI7cw7ODw==}
@@ -1198,6 +1205,12 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
+  react-social-icons@6.25.0:
+    resolution: {integrity: sha512-PN9UpIb+f2u9H2t6MOoybaCD88yvQH+f9z/BILlg+n9MRzSYPtDODPzLb5dCUeyQ42eYyGDPGPIVARLWz5UEjg==}
+    peerDependencies:
+      react: 16.x.x || 17.x.x || 18.x.x || 19.x.x
+      react-dom: 16.x.x || 17.x.x || 18.x.x || 19.x.x
+
   react@19.1.1:
     resolution: {integrity: sha512-w8nqGImo45dmMIfljjMwOGtbmC/mk4CMYhWIicdSflH91J9TyCyczcPFXJzrZ/ZXcgGRFeP6BU0BEJTw6tZdfQ==}
     engines: {node: '>=0.10.0'}
@@ -1466,6 +1479,8 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.0
       '@babel/helper-plugin-utils': 7.27.1
+
+  '@babel/runtime@7.28.4': {}
 
   '@babel/template@7.27.2':
     dependencies:
@@ -2385,6 +2400,12 @@ snapshots:
       scheduler: 0.26.0
 
   react-refresh@0.17.0: {}
+
+  react-social-icons@6.25.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
+    dependencies:
+      '@babel/runtime': 7.28.4
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
   react@19.1.1: {}
 

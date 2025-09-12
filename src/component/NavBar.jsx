@@ -12,7 +12,7 @@ const NavBar = () => {
   { name: "Home", href: "#home" },
   { name: "Find Jobs", href: "#findjobs" },
 
-  
+
   { name: "Contacts Us ", href: "#contact-us" },
 ];
     return (
@@ -54,8 +54,8 @@ const NavBar = () => {
                     ))}
                   </div>
                   <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" className="text-sm/6 font-semibold text-[#008eca]">
-                      Log in 
+                    <a href="#findjobs" className="text-sm/6 font-semibold text-[#008eca]">
+                      Find Jobs 
                     </a>
                   </div>
                 </nav>
